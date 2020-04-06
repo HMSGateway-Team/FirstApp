@@ -104,7 +104,7 @@ For `DATA_SOURCE_IP_OR_HOSTNAME`, you can request IP/DNS of the data source inst
             };
 
             // Test get some practitioner
-            hms.get('practitioner', headers, 'name.givenName:contain="Rozelle 105418"&sort=-identifier.start')
+            hms.get('practitioner', headers, 'name.givenName:contain="Silas S9"&sort=-identifier.start')
             .then((response) => { console.log('Searching with request URL:', JSON.stringify(response, null, 2)); })
             .catch((err) => { console.log('Error :', err); });
         } catch(err) {
@@ -153,7 +153,7 @@ hms.Initial(tokens, (error, response) => {
     
             console.log('Header : ', headers)
     
-            hms.get('practitioner', headers, 'name.givenName:contain="Rozelle"&sort=-identifier.start')
+            hms.get('practitioner', headers, 'name.givenName:contain="Silas S9"&sort=-identifier.start')
             .then((response) => { console.log('Searching with request URL:', JSON.stringify(response, null, 2)); })
             .catch((err) => { console.log('Error :', err); });
     
