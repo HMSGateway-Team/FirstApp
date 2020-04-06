@@ -1,5 +1,6 @@
 // Declare HMS instance object
 const hmshealthapi = require('@hmsconnect/hmshealthapi');
+require('dotenv').config();
 
 let tokens = {
     username: process.env.USERNAME,
@@ -32,7 +33,7 @@ hms.Initial(tokens, (error, response) => {
     
             console.log('Header : ', headers)
     
-            hms.get('practitioner', headers, 'name.givenName:contain="Rozelle 105418"&sort=-identifier.start')
+            hms.get('practitioner', headers, 'name.givenName:contain="Silas"&sort=-identifier.start')
             .then((response) => { console.log('Searching with request URL:', JSON.stringify(response, null, 2)); })
             .catch((err) => { console.log('Error :', err); });
     
